@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.21" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 2.5.2.v20100208 Build &lt;2.5.2.v20100210-0630></property>
+    <property name="units">in</property>
+    <property name="theme">bugzillaReportsLibrary.bugzillaTheme</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">bugzillaReportsLibrary.rptlibrary</property>
+            <property name="namespace">bugzillaReportsLibrary</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="bugID" id="17">
+            <text-property name="promptText">Enter the Bug ID</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="bugzillaDataSource" id="7"
+ extends="bugzillaReportsLibrary.bugzillaDataSource"/>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="getBugByID" id="8"
+ extends="bugzillaReportsLibrary.getAllBugs">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">bugID</property>
+                    <property name="paramName">bugID</property>
+                    <property name="dataType">string</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">bug_id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">bug_severity</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">bug_status</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">short_desc</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">userid</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">login_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">realname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">bug_id</property>
+                    <property name="nativeName">bug_id</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">bug_severity</property>
+                    <property name="nativeName">bug_severity</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">bug_status</property>
+                    <property name="nativeName">bug_status</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">short_desc</property>
+                    <property name="nativeName">short_desc</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">userid</property>
+                    <property name="nativeName">userid</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">login_name</property>
+                    <property name="nativeName">login_name</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">realname</property>
+                    <property name="nativeName">realname</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">name</property>
+                    <property name="nativeName">name</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">description</property>
+                    <property name="nativeName">description</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT
+		bugs.bug_id,
+        bugs.bug_severity,
+        bugs.bug_status,
+        bugs.short_desc,
+        profiles.userid,
+        profiles.login_name,
+        profiles.realname,
+        components.id,
+        components.name,
+        components.description
+FROM
+        bugs,
+        profiles,
+        components
+WHERE 
+        bugs.component_id    = components.id 
+        AND bugs.assigned_to = profiles.userid
+        and bugs.bug_id = ?
+]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="getBugHistory" id="131">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">bugID</property>
+                    <property name="paramName">bugID</property>
+                    <property name="dataType">string</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">bug_when</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">added</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">removed</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">realname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">bugzillaDataSource</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">bug_when</property>
+                    <property name="nativeName">bug_when</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">added</property>
+                    <property name="nativeName">added</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">removed</property>
+                    <property name="nativeName">removed</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">realname</property>
+                    <property name="nativeName">realname</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">name</property>
+                    <property name="nativeName">name</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+	bugs_activity.bug_when,
+	bugs_activity.added,
+	bugs_activity.removed,
+	profiles.realname,
+	fielddefs.name
+from 
+	bugs_activity,
+	profiles,
+	fielddefs
+where
+	bugs_activity.who = profiles.userid
+	and bugs_activity.fieldid = fielddefs.id
+	and bug_id = ?
+]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="BugzillaMasterPage" id="9" extends="bugzillaReportsLibrary.BugzillaMasterPage">
+            <overridden-values>
+                <ref-entry baseId="12" name="NewGrid" id="12"/>
+                <ref-entry baseId="13" id="13"/>
+                <ref-entry baseId="14" id="14"/>
+                <ref-entry baseId="15" id="15"/>
+                <ref-entry baseId="16" name="NewLabel" id="16"/>
+            </overridden-values>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="18">
+            <property name="dataSet">getBugByID</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">bug_id</property>
+                    <text-property name="displayName">bug_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["bug_id"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">bug_severity</property>
+                    <text-property name="displayName">bug_severity</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["bug_severity"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">bug_status</property>
+                    <text-property name="displayName">bug_status</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["bug_status"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">short_desc</property>
+                    <text-property name="displayName">short_desc</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["short_desc"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">userid</property>
+                    <text-property name="displayName">userid</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["userid"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">login_name</property>
+                    <text-property name="displayName">login_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["login_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">realname</property>
+                    <text-property name="displayName">realname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["realname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">id</property>
+                    <text-property name="displayName">id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">name</property>
+                    <text-property name="displayName">name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">description</property>
+                    <text-property name="displayName">description</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["description"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="72">
+                <property name="style">BugDescriptionHeaderLabel</property>
+            </column>
+            <column id="73">
+                <property name="style">BugDescriptionHeaderData</property>
+            </column>
+            <detail>
+                <row id="40">
+                    <cell id="41">
+                        <label id="126">
+                            <text-property name="text">Bug ID</text-property>
+                        </label>
+                    </cell>
+                    <cell id="43">
+                        <data id="42">
+                            <property name="resultSetColumn">bug_id</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="82">
+                    <cell id="83">
+                        <label id="127">
+                            <text-property name="text">Short Description of Bug</text-property>
+                        </label>
+                    </cell>
+                    <cell id="84">
+                        <data id="48">
+                            <property name="resultSetColumn">short_desc</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="93">
+                    <cell id="94">
+                        <label id="128">
+                            <text-property name="text">Bug Severity</text-property>
+                        </label>
+                    </cell>
+                    <cell id="95">
+                        <data id="44">
+                            <property name="resultSetColumn">bug_severity</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="104">
+                    <cell id="105">
+                        <label id="129">
+                            <text-property name="text">Status of Bug</text-property>
+                        </label>
+                    </cell>
+                    <cell id="106">
+                        <data id="46">
+                            <property name="resultSetColumn">bug_status</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="115">
+                    <cell id="116">
+                        <label id="130">
+                            <text-property name="text">Currently Assigned To</text-property>
+                        </label>
+                    </cell>
+                    <cell id="117">
+                        <data id="54">
+                            <property name="resultSetColumn">realname</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+        <table id="156">
+            <property name="dataSet">getBugHistory</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">bug_when</property>
+                    <text-property name="displayName">bug_when</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["bug_when"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">added</property>
+                    <text-property name="displayName">added</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["added"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">removed</property>
+                    <text-property name="displayName">removed</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["removed"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">realname</property>
+                    <text-property name="displayName">realname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["realname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">name</property>
+                    <text-property name="displayName">name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="185"/>
+            <column id="186"/>
+            <column id="187"/>
+            <column id="188"/>
+            <column id="189"/>
+            <header>
+                <row id="157">
+                    <property name="style">DetailTableHeader</property>
+                    <cell id="158">
+                        <label id="159">
+                            <text-property name="text">Revision Date</text-property>
+                        </label>
+                    </cell>
+                    <cell id="160">
+                        <label id="161">
+                            <text-property name="text">Field Updated</text-property>
+                        </label>
+                    </cell>
+                    <cell id="162">
+                        <label id="163">
+                            <text-property name="text">Added</text-property>
+                        </label>
+                    </cell>
+                    <cell id="164">
+                        <label id="165">
+                            <text-property name="text">Removed</text-property>
+                        </label>
+                    </cell>
+                    <cell id="166">
+                        <label id="167">
+                            <text-property name="text">Updated By</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="168">
+                    <property name="style">DetailTableRow</property>
+                    <cell id="169">
+                        <data id="170">
+                            <property name="resultSetColumn">bug_when</property>
+                        </data>
+                    </cell>
+                    <cell id="171">
+                        <data id="178">
+                            <property name="resultSetColumn">name</property>
+                        </data>
+                    </cell>
+                    <cell id="173">
+                        <data id="172">
+                            <property name="resultSetColumn">added</property>
+                        </data>
+                    </cell>
+                    <cell id="175">
+                        <data id="174">
+                            <property name="resultSetColumn">removed</property>
+                        </data>
+                    </cell>
+                    <cell id="177">
+                        <data id="176">
+                            <property name="resultSetColumn">realname</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="179">
+                    <cell id="180"/>
+                    <cell id="181"/>
+                    <cell id="182"/>
+                    <cell id="183"/>
+                    <cell id="184"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

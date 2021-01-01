@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.21" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__rprmManager_66_0</property>
+            <property name="value">Bondur, Gerard</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__rprmEmployee_67_1</property>
+            <property name="value">Castillo, Pamela</property>
+        </structure>
+        <structure>
+            <property name="name">rprmManager_66_2</property>
+            <property name="value">Bondur, Gerard</property>
+        </structure>
+        <structure>
+            <property name="name">rprmManager_66_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">rprmManager_66_expr_</property>
+            <property name="value">row["MANAGERNAME"]</property>
+        </structure>
+        <structure>
+            <property name="name">rprmEmployee_67_3</property>
+            <property name="value">1401</property>
+        </structure>
+        <structure>
+            <property name="name">rprmEmployee_67_type_</property>
+            <property name="value">integer</property>
+        </structure>
+        <structure>
+            <property name="name">rprmEmployee_67_expr_</property>
+            <property name="value">row["EMPLOYEENUMBER"]</property>
+        </structure>
+    </list-property>
+</report>

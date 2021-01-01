@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.21" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__rprmReportTitle_7_0</property>
+            <property name="value">Customer Orders Report</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__rprmCustomerID_33_1</property>
+            <property name="value">148</property>
+        </structure>
+        <structure>
+            <property name="name">rprmReportTitle_7_2</property>
+            <property name="value">Customer Orders Report</property>
+        </structure>
+        <structure>
+            <property name="name">rprmReportTitle_7_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">rprmCustomerID_33_3</property>
+            <property name="value">148</property>
+        </structure>
+        <structure>
+            <property name="name">rprmCustomerID_33_type_</property>
+            <property name="value">integer</property>
+        </structure>
+    </list-property>
+</report>

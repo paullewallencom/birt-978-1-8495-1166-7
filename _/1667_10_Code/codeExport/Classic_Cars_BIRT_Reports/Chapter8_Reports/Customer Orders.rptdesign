@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.21" id="1">
+    <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 2.5.2.v20100208 Build &lt;2.5.2.v20100210-0630></property>
+    <html-property name="description">Creates a blank report with no predefined content.</html-property>
+    <property name="units">in</property>
+    <property name="theme">ClassicCarsLibrary.defaultTheme</property>
+    <text-property name="displayName">Blank Report</text-property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ClassicCarsLibrary.rptlibrary</property>
+            <property name="namespace">ClassicCarsLibrary</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="rprmReportTitle" id="7" extends="ClassicCarsLibrary.rprmReportTitle">
+            <text-property name="promptText">Enter the Report Title</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">Customer Orders Report</value>
+            </simple-property-list>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="rprmCustomerID" id="33" extends="ClassicCarsLibrary.rprmCustomerID"/>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="dsClassicCars" id="6"
+ extends="ClassicCarsLibrary.dsClassicCars"/>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="getCustomerInformation" id="32"
+ extends="ClassicCarsLibrary.getCustomerInformation"/>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="getCustomerOrders" id="182">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">dsprmCustomerID</property>
+                    <property name="paramName">rprmCustomerID</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ORDERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">PRODUCTCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">QUANTITYORDERED</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">PRICEEACH</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ORDERLINENUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">ORDERNUMBER_6</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">ORDERDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">REQUIREDDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">SHIPPEDDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">COMMENTS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">CUSTOMERNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">dsClassicCars</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ORDERNUMBER</property>
+                    <property name="nativeName">ORDERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">PRODUCTCODE</property>
+                    <property name="nativeName">PRODUCTCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">QUANTITYORDERED</property>
+                    <property name="nativeName">QUANTITYORDERED</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">PRICEEACH</property>
+                    <property name="nativeName">PRICEEACH</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ORDERLINENUMBER</property>
+                    <property name="nativeName">ORDERLINENUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">5</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">ORDERNUMBER_6</property>
+                    <property name="nativeName">ORDERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">ORDERDATE</property>
+                    <property name="nativeName">ORDERDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">REQUIREDDATE</property>
+                    <property name="nativeName">REQUIREDDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">SHIPPEDDATE</property>
+                    <property name="nativeName">SHIPPEDDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">STATUS</property>
+                    <property name="nativeName">STATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">COMMENTS</property>
+                    <property name="nativeName">COMMENTS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">CUSTOMERNUMBER</property>
+                    <property name="nativeName">CUSTOMERNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+	*
+from 
+	CLASSICMODELS.ORDERDETAILS,
+	CLASSICMODELS.ORDERS
+where
+	CLASSICMODELS.ORDERS.ORDERNUMBER = CLASSICMODELS.ORDERDETAILS.ORDERNUMBER
+    and CLASSICMODELS.ORDERS.CUSTOMERNUMBER = ?	]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>1.0</Version>
+  <design:DataSetParameters>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name></design:name>
+        <design:position>1</design:position>
+        <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+        <design:nullability>Unknown</design:nullability>
+        <design:uiHints>
+          <design:displayName>Enter the Customer ID</design:displayName>
+        </design:uiHints>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>148</design:defaultScalarValue>
+          <design:optional>false</design:optional>
+          <design:masksValue>false</design:masksValue>
+          <design:uiHints>
+            <design:promptStyle>TextField</design:promptStyle>
+          </design:uiHints>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+  </design:DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="topMargin">1in</property>
+            <property name="leftMargin">1.25in</property>
+            <property name="bottomMargin">1in</property>
+            <property name="rightMargin">1.25in</property>
+            <page-header>
+                <grid name="hdrGrid" id="30" extends="ClassicCarsLibrary.hdrGrid">
+                    <overridden-values>
+                        <ref-entry baseId="7" id="341"/>
+                        <ref-entry baseId="8" id="8"/>
+                        <ref-entry baseId="9" id="9"/>
+                        <ref-entry baseId="10" id="10"/>
+                        <ref-entry baseId="18" name="hdrLogo" id="18"/>
+                        <ref-entry baseId="11" id="11"/>
+                        <ref-entry baseId="20" name="hdrHeaderLabel1" id="20">
+                            <property name="text">Classic Cars Incorporated</property>
+                        </ref-entry>
+                        <ref-entry baseId="12" id="12"/>
+                        <ref-entry baseId="14" id="14"/>
+                        <ref-entry baseId="22" name="hdrHeaderLabel2" id="22"/>
+                        <ref-entry baseId="15" id="15"/>
+                        <ref-entry baseId="17" id="17"/>
+                    </overridden-values>
+                </grid>
+            </page-header>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="34">
+            <property name="marginTop">1pt</property>
+            <property name="marginLeft">1pt</property>
+            <property name="marginBottom">1pt</property>
+            <property name="marginRight">1pt</property>
+            <property name="height">2.5104166667in</property>
+            <property name="width">5.3125in</property>
+            <property name="dataSet">getCustomerInformation</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CUSTOMERNUMBER</property>
+                    <expression name="expression">dataSetRow["CUSTOMERNUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">CUSTOMERNAME</property>
+                    <expression name="expression">dataSetRow["CUSTOMERNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CONTACTLASTNAME</property>
+                    <expression name="expression">dataSetRow["CONTACTLASTNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CONTACTFIRSTNAME</property>
+                    <expression name="expression">dataSetRow["CONTACTFIRSTNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PHONE</property>
+                    <expression name="expression">dataSetRow["PHONE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ADDRESSLINE1</property>
+                    <expression name="expression">dataSetRow["ADDRESSLINE1"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ADDRESSLINE2</property>
+                    <expression name="expression">dataSetRow["ADDRESSLINE2"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CITY</property>
+                    <expression name="expression">dataSetRow["CITY"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">STATE</property>
+                    <expression name="expression">dataSetRow["STATE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">POSTALCODE</property>
+                    <expression name="expression">dataSetRow["POSTALCODE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">COUNTRY</property>
+                    <expression name="expression">dataSetRow["COUNTRY"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">SALESREPEMPLOYEENUMBER</property>
+                    <expression name="expression">dataSetRow["SALESREPEMPLOYEENUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">CREDITLIMIT</property>
+                    <expression name="expression">dataSetRow["CREDITLIMIT"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">50</property>
+            <column id="103">
+                <property name="width">2.2291666667in</property>
+                <property name="style">CustomerHeaderInfo</property>
+                <property name="marginBottom">1pt</property>
+            </column>
+            <column id="104">
+                <property name="width">3.3958333333in</property>
+                <property name="style">CustomHeaderData</property>
+            </column>
+            <detail>
+                <row id="62">
+                    <cell id="63">
+                        <label id="37">
+                            <text-property name="text">CUSTOMER NUMBER:</text-property>
+                        </label>
+                    </cell>
+                    <cell id="65">
+                        <data id="64">
+                            <property name="resultSetColumn">CUSTOMERNUMBER</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="171">
+                    <cell id="172">
+                        <label id="39">
+                            <text-property name="text">CUSTOMER NAME:</text-property>
+                        </label>
+                    </cell>
+                    <cell id="173">
+                        <data id="66">
+                            <property name="resultSetColumn">CUSTOMERNAME</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="160">
+                    <cell id="161">
+                        <label id="47">
+                            <text-property name="text">ADDRESS</text-property>
+                        </label>
+                    </cell>
+                    <cell id="162">
+                        <data id="74">
+                            <property name="resultSetColumn">ADDRESSLINE1</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="149">
+                    <cell id="150">
+                        <label id="51">
+                            <text-property name="text">CITY</text-property>
+                        </label>
+                    </cell>
+                    <cell id="151">
+                        <data id="78">
+                            <property name="resultSetColumn">CITY</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="138">
+                    <cell id="139">
+                        <label id="53">
+                            <text-property name="text">STATE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="140">
+                        <data id="80">
+                            <property name="resultSetColumn">STATE</property>
+                        </data>
+                        <data id="82">
+                            <property name="resultSetColumn">POSTALCODE</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="127">
+                    <cell id="128">
+                        <label id="57">
+                            <text-property name="text">COUNTRY</text-property>
+                        </label>
+                    </cell>
+                    <cell id="129">
+                        <data id="84">
+                            <property name="resultSetColumn">COUNTRY</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="116">
+                    <cell id="117">
+                        <label id="45">
+                            <text-property name="text">PHONE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="118">
+                        <data id="72">
+                            <property name="resultSetColumn">PHONE</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+        <table id="259">
+            <property name="marginTop">1pt</property>
+            <property name="marginLeft">1pt</property>
+            <property name="marginBottom">1pt</property>
+            <property name="marginRight">1pt</property>
+            <property name="width">100%</property>
+            <property name="dataSet">getCustomerOrders</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ORDERNUMBER</property>
+                    <expression name="expression">dataSetRow["ORDERNUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">PRODUCTCODE</property>
+                    <expression name="expression">dataSetRow["PRODUCTCODE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">QUANTITYORDERED</property>
+                    <expression name="expression">dataSetRow["QUANTITYORDERED"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">PRICEEACH</property>
+                    <expression name="expression">dataSetRow["PRICEEACH"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">ORDERLINENUMBER</property>
+                    <expression name="expression">dataSetRow["ORDERLINENUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">ORDERNUMBER_6</property>
+                    <expression name="expression">dataSetRow["ORDERNUMBER_6"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">ORDERDATE</property>
+                    <expression name="expression">dataSetRow["ORDERDATE"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">REQUIREDDATE</property>
+                    <expression name="expression">dataSetRow["REQUIREDDATE"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">SHIPPEDDATE</property>
+                    <expression name="expression">dataSetRow["SHIPPEDDATE"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">STATUS</property>
+                    <expression name="expression">dataSetRow["STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">COMMENTS</property>
+                    <expression name="expression">dataSetRow["COMMENTS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CUSTOMERNUMBER</property>
+                    <expression name="expression">dataSetRow["CUSTOMERNUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <property name="pageBreakInterval">50</property>
+            <column id="323">
+                <property name="suppressDuplicates">true</property>
+            </column>
+            <column id="324"/>
+            <column id="325"/>
+            <column id="326"/>
+            <column id="327"/>
+            <column id="329"/>
+            <column id="330"/>
+            <column id="331"/>
+            <column id="332"/>
+            <header>
+                <row id="260">
+                    <cell id="261">
+                        <label id="262">
+                            <text-property name="text">ORDERNUMBER</text-property>
+                        </label>
+                    </cell>
+                    <cell id="263">
+                        <label id="264">
+                            <text-property name="text">PRODUCTCODE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="265">
+                        <label id="266">
+                            <text-property name="text">QUANTITYORDERED</text-property>
+                        </label>
+                    </cell>
+                    <cell id="267">
+                        <label id="268">
+                            <text-property name="text">PRICEEACH</text-property>
+                        </label>
+                    </cell>
+                    <cell id="269">
+                        <label id="270">
+                            <text-property name="text">ORDERLINENUMBER</text-property>
+                        </label>
+                    </cell>
+                    <cell id="273">
+                        <label id="274">
+                            <text-property name="text">ORDERDATE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="275">
+                        <label id="276">
+                            <text-property name="text">REQUIREDDATE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="277">
+                        <label id="278">
+                            <text-property name="text">SHIPPEDDATE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="279">
+                        <label id="280">
+                            <text-property name="text">STATUS</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="285">
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <property name="backgroundColor">#C0C0C0</property>
+                            <expression name="testExpr" type="javascript">row.__rownum % 2</expression>
+                            <simple-property-list name="value1">
+                                <value type="javascript">0</value>
+                            </simple-property-list>
+                        </structure>
+                    </list-property>
+                    <cell id="286">
+                        <data id="287">
+                            <property name="resultSetColumn">ORDERNUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="288">
+                        <data id="289">
+                            <property name="resultSetColumn">PRODUCTCODE</property>
+                        </data>
+                    </cell>
+                    <cell id="290">
+                        <data id="291">
+                            <property name="resultSetColumn">QUANTITYORDERED</property>
+                        </data>
+                    </cell>
+                    <cell id="292">
+                        <data id="293">
+                            <property name="resultSetColumn">PRICEEACH</property>
+                        </data>
+                    </cell>
+                    <cell id="294">
+                        <data id="295">
+                            <property name="resultSetColumn">ORDERLINENUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="298">
+                        <data id="299">
+                            <property name="resultSetColumn">ORDERDATE</property>
+                        </data>
+                    </cell>
+                    <cell id="300">
+                        <data id="301">
+                            <property name="resultSetColumn">REQUIREDDATE</property>
+                        </data>
+                    </cell>
+                    <cell id="302">
+                        <data id="303">
+                            <property name="resultSetColumn">SHIPPEDDATE</property>
+                        </data>
+                    </cell>
+                    <cell id="304">
+                        <data id="305">
+                            <property name="resultSetColumn">STATUS</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="310">
+                    <cell id="311"/>
+                    <cell id="312"/>
+                    <cell id="313"/>
+                    <cell id="314"/>
+                    <cell id="315"/>
+                    <cell id="317"/>
+                    <cell id="318"/>
+                    <cell id="319"/>
+                    <cell id="320"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>
